@@ -6,7 +6,10 @@ type AppProps = {
   message: string;
 }; /* use `interface` if exporting so that consumers can extend */
 
-// you can choose annotate the return type so an error is raised if you accidentally return some other type
-const App = ({ message }: AppProps): JSX.Element => <div>{message}</div>;
+// you can choose annotate the return type
+// so an error is raised if you accidentally return some other type
+const App = ({message}: AppProps): JSX.Element => {
+  return <div>{message}</div>;
+};
 
 export default App;
